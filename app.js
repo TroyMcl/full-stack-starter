@@ -13,8 +13,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
-app.get('/hello', (req, res) => {
-  res.send('Hello World!');
+app.get('*', (req, res) => {
+  res.send('Hi, You missed all the routes!');
 });
 
 module.exports = app;
